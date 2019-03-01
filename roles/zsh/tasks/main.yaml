@@ -1,0 +1,11 @@
+- name: install prezto
+  git: 
+    repo: https://github.com/sorin-ionescu/prezto.git
+    dest: ${HOME}/.zprezto
+    force: yes
+
+- name: copy zpreztorc
+  copy:
+    src: ../files/prezto/zpreztorc
+    dest: $HOME/.zprezto/runcoms
+    backup: yes

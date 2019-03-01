@@ -1,0 +1,2 @@
+- name: Set KeyRepeat
+  shell: defaults write -g InitialKeyRepeat -int 18 & defaults write -g KeyRepeat -int 1

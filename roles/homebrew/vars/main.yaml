@@ -1,0 +1,22 @@
+homebrew_taps:
+  - { name: homebrew/cask }
+
+homebrew_packages:
+  - { name: jq }
+  - { name: tree }
+  - { name: curl }
+  - { name: nkf }
+  - { name: zsh }
+  - { name: ansible }
+  - { name: tig }
+  - { name: graphviz }
+
+homebrew_cask_packages:
+  - { name: docker }
+  - { name: jetbrains-toolbox }
+  - { name: visual-studio-code }
+  - { name: iterm2 }
+  - { name: slack }
+  - { name: google-chrome }
+  - { name: station }
+  - { name: intellij-idea }

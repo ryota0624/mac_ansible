@@ -1,3 +1,10 @@
+- name: write zsh installed by brew to /etc/shells
+  become: true
+  shell: echo /usr/local/bin/zsh >> /etc/shells
+
+- name: set zsh to default shell
+  shell: chsh -s /usr/local/bin/zsh
+
 - name: install prezto
   git: 
     repo: https://github.com/sorin-ionescu/prezto.git
@@ -6,6 +13,12 @@
 
 - name: copy zpreztorc
   copy:
-    src: ../files/prezto/zpreztorc
-    dest: $HOME/.zprezto/runcoms
+    src: ../files/prezto/runcoms/zpreztorc
+    dest: $HOME/.zprezto/runcoms/zpreztorc
+    backup: yes
+
+- name: copy zprofile
+  copy:
+    src: ../files/prezto/runcoms/zprofile
+    dest: $HOME/.zprezto/runcoms/zprofile
     backup: yes

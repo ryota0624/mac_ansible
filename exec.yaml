@@ -2,4 +2,7 @@
   connection: local
   roles:
     - { role: system, tags: [system] }
+    - { role: homebrew, tags: [homebrew] }
     - { role: zsh, tags: [zsh] }
+    - { role: go, tags: [go] }
+    - { role: node, tags: [node] }

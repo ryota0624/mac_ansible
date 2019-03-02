@@ -7,9 +7,10 @@ homebrew_packages:
   - { name: curl }
   - { name: nkf }
   - { name: zsh }
-  - { name: ansible }
   - { name: tig }
   - { name: graphviz }
+  - { name: direnv }
+  - { name: goenv }
 
 homebrew_cask_packages:
   - { name: docker }

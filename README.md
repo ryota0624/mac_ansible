@@ -11,4 +11,10 @@
 - fnキーの設定
 - タップでクリック
 - キーボードのへんかん
+  - ライブへんかんOFF
 - vscodeでtab -> space2
+
+## ansible
+
+### 特定のタグのみ実行
+ansible-playbook example.yml --tags "zsh"

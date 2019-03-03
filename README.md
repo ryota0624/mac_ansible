@@ -7,3 +7,8 @@
 - ansibleのインストール
   - brew update && brew install ansible
 - githubへのsshキー登録
+
+- fnキーの設定
+- タップでクリック
+- キーボードのへんかん
+- vscodeでtab -> space2

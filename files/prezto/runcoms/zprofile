@@ -66,11 +66,11 @@ fi
 # Goenv
 #
 
-export PATH="$HOME/.goenv/bin:$PATH"
-eval "$(goenv init -)"
+# export PATH="$HOME/.goenv/bin:$PATH"
+# eval "$(goenv init -)"
 
 #
 # NVM
 #
 
-source ~/.nvm/nvm.sh
+# source ~/.nvm/nvm.sh

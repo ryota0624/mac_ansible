@@ -11,6 +11,11 @@ homebrew_packages:
   - { name: graphviz }
   - { name: direnv }
   - { name: goenv }
+  - { name: jenv }
+  - { name: java }
+  - { name: scalaenv }
+  - { name: sbt }
+  - { name: whalebrew }
 
 homebrew_cask_packages:
   - { name: docker }
@@ -19,5 +24,5 @@ homebrew_cask_packages:
   - { name: iterm2 }
   - { name: slack }
   - { name: google-chrome }
-  - { name: station }
   - { name: intellij-idea }
+  - { name: trailer }

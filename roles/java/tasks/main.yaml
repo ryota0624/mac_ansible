@@ -1,0 +1,12 @@
+- name: init jenv
+  shell: |
+    echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zprezto/runcoms/zshrc
+    echo 'eval "$(jenv init -)"' >> ~/.zprezto/runcoms/zshrc
+
+- name: make jEnv dir
+  file: path=~/.jenv/versions
+        state=directory
+
+- name: add brew java
+  shell: |
+    jenv add $(/usr/libexec/java_home)

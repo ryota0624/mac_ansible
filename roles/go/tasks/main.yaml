@@ -1,22 +1,22 @@
 
-- name: install go11.1
-  shell: goenv install 1.11.0 && goenv global 1.11.0
+- name: install go14.0
+  shell: goenv install 1.14.0 && goenv global 1.14.0
 
 - name: use go
   shell: export PATH="$HOME/.goenv/bin:$PATH" && eval "$(goenv init -)"   
 
-- name: install git commit to slack tool
-  git: 
-    repo: https://github.com/ryota0624/go_app_sample
-    dest: ${HOME}/git/commit-to-slack
-    force: yes
-    version: feat/git_hooks
+#- name: install git commit to slack tool
+#  git:
+#    repo: https://github.com/ryota0624/go_app_sample
+#    dest: ${HOME}/git/commit-to-slack
+#    force: yes
+#    version: feat/git_hooks
 
 # こけるので一旦コメントアウト、手動でビルドする
 # - name: build commit to slack
 #   make:
 #     chdir: ${HOME}/git/commit-to-slack
 #     target: install-githook-post
-
-- name: copy to post-commit
-  shell: cp ${HOME}/git/commit-to-slack/post_commit ${HOME}/.git_template/hooks/post-commit && chmod 777 ${HOME}/.git_template/hooks/post-commit
+#
+#- name: copy to post-commit
+#  shell: cp ${HOME}/git/commit-to-slack/post_commit ${HOME}/.git_template/hooks/post-commit && chmod 777 ${HOME}/.git_template/hooks/post-commit

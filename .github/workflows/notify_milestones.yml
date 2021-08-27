@@ -19,16 +19,14 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo
             })
-            console.log(milestones)
             const openMilestone = milestones.data.filter(m => m.state === "open")
-            console.log(openMilestone)
             const buildMessage = (milestones) => {
               return milestones.map(m => {
                 return `<${m.html_url}|${m.title}>`
               })
             }
-            const slackMessage = buildMessage(openMilestone).join("\n")
-            console.log(slackMessage)
+            const milestonesMessage = buildMessage(openMilestone).join("\n")
+            const slackMessage = `${context.repo.owner}/${context.repo.repo}の進行中のmilestoneを通知します。\n${milestonesMessage}`
             const slackPayload = {text: slackMessage }
             fetch(process.env.SLACK_URL, { method: "POST", body: JSON.stringify(slackPayload) }).catch(err => console.error(err));
 

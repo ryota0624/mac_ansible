@@ -7,10 +7,14 @@ jobs:
   notify-milestone:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/github-script@v3
+      - run: npm install node-fetch
+      - uses: actions/github-script@v4
+        env:
+          SLACK_URL: ${{secrets.SLACK_URL}}
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
           script: |
+            const fetch = require('node-fetch');
             const milestones = await github.issues.listMilestones({
               owner: context.repo.owner,
               repo: context.repo.repo
@@ -18,3 +22,13 @@ jobs:
             console.log(milestones)
             const openMilestone = milestones.data.filter(m => m.state === "open")
             console.log(openMilestone)
+            const buildMessage = (milestones) => {
+              return milestones.map(m => {
+                return `<${m.html_url}|${m.title}>`
+              })
+            }
+            const slackMessage = buildMessage(openMilestone).join("\n")
+            console.log(slackMessage)
+            const slackPayload = {text: slackMessage }
+            fetch(process.env.SLACK_URL, { method: "POST", body: JSON.stringify(slackPayload) }).catch(err => console.error(err));
+

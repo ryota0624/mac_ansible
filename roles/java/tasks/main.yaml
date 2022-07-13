@@ -1,12 +1,5 @@
-- name: init jenv
+- name: install sdkman
   shell: |
-    echo 'export PATH="$HOME/.jenv/bin:$PATH"' >> ~/.zprezto/runcoms/zshrc
-    echo 'eval "$(jenv init -)"' >> ~/.zprezto/runcoms/zshrc
+    curl -s "https://get.sdkman.io" | bash
+    source "$HOME/.sdkman/bin/sdkman-init.sh"
 
-- name: make jEnv dir
-  file: path=~/.jenv/versions
-        state=directory
-
-- name: add brew java
-  shell: |
-    jenv add $(/usr/libexec/java_home)

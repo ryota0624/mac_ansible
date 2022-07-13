@@ -1,5 +1,0 @@
-- name: clone workspace repository
-  git: 
-    repo: https://github.com/ryota0624/vsnote_ws.git
-    dest: ${HOME}/git/vsnote_ws
-    force: yes

@@ -4,28 +4,3 @@
 
 - name: set zsh to default shell
   shell: chsh -s /usr/local/bin/zsh
-
-- name: install prezto
-  git: 
-    repo: https://github.com/sorin-ionescu/prezto.git
-    dest: ${HOME}/.zprezto
-    force: yes
-
-- name: gen zshrc etc..
-  shell: |
-    setopt EXTENDED_GLOB
-    for rcfile in "${ZDOTDIR:-$HOME}"/.zprezto/runcoms/^README.md(.N); do
-      ln -s "$rcfile" "${ZDOTDIR:-$HOME}/.${rcfile:t}"
-    done
-
-- name: copy zpreztorc
-  copy:
-    src: ../files/prezto/runcoms/zpreztorc
-    dest: $HOME/.zprezto/runcoms/zpreztorc
-    backup: yes
-
-- name: copy zprofile
-  copy:
-    src: ../files/prezto/runcoms/zprofile
-    dest: $HOME/.zprezto/runcoms/zprofile
-    backup: yes

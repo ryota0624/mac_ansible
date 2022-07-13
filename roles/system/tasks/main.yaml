@@ -5,11 +5,3 @@
   file:
     path: ${HOME}/git
     state: directory
-
-- name: create git template
-  file:
-    path: ${HOME}/.git_template/hooks
-    state: directory
-
-- name: load git template
-  shell: git config --global init.templatedir '~/.git_template'

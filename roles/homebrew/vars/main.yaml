@@ -10,12 +10,12 @@ homebrew_packages:
   - { name: tig }
   - { name: graphviz }
   - { name: direnv }
-  - { name: goenv }
-  - { name: jenv }
   - { name: java }
-  - { name: scalaenv }
   - { name: sbt }
-  - { name: whalebrew }
+  - { name: dart }
+  - { name: go }
+  - { name: starship }
+  - { name: exa }
 
 homebrew_cask_packages:
   - { name: docker }

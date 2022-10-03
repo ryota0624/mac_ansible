@@ -13,9 +13,12 @@ homebrew_packages:
   - { name: java }
   - { name: sbt }
   - { name: dart }
+  - { name: flutter }
   - { name: go }
   - { name: starship }
   - { name: exa }
+  - { name: fig }
+  - { name: peco }
 
 homebrew_cask_packages:
   - { name: docker }
@@ -26,3 +29,4 @@ homebrew_cask_packages:
   - { name: google-chrome }
   - { name: intellij-idea }
   - { name: trailer }
+  - { name: alt-tab }

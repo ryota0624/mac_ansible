@@ -1,5 +1,7 @@
 homebrew_taps:
   - { name: homebrew/cask }
+  - { name: leoafarias/fvm }
+
 
 homebrew_packages:
   - { name: jq }
@@ -12,21 +14,18 @@ homebrew_packages:
   - { name: direnv }
   - { name: java }
   - { name: sbt }
-  - { name: dart }
-  - { name: flutter }
   - { name: go }
   - { name: starship }
   - { name: exa }
-  - { name: fig }
   - { name: peco }
+  - { name: fvm }
 
 homebrew_cask_packages:
   - { name: docker }
   - { name: jetbrains-toolbox }
   - { name: visual-studio-code }
-  - { name: iterm2 }
   - { name: slack }
   - { name: google-chrome }
   - { name: intellij-idea }
-  - { name: trailer }
   - { name: alt-tab }
+  - { name: wezterm }
